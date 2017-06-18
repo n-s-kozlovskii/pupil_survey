@@ -17,6 +17,7 @@
     \usepackage[T1]{fontenc}
     % Nicer default font (+ math font) than Computer Modern for most use cases
     \usepackage{mathpazo}
+    \usepackage[russian]{babel}
 
     % Basic figure setup, for now with no caption control since it's done
     % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
@@ -66,7 +67,7 @@
     \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
                                 % normalem makes italics be italics, not underlines
     
-	\usepackage[russian]{babel}
+
     
     
     % Colors for the hyperref package
@@ -159,73 +160,73 @@
     \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
 \def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
 
-\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
-\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
-\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
 \expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
-\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
-\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
-\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
-\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
-\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
-\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
-\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
-\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
-\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
-\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
-\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
-\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
-\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
-\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
-\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
-\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
-\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
 \expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
-\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
-\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
-\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
-\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
-\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
 \expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
-\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
 \expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
-\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
-\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
 \expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
-\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
-\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
 \expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
 \expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
 
 \def\PYZbs{\char`\\}
 \def\PYZus{\char`\_}
@@ -275,333 +276,166 @@
     \begin{document}
     
     
-    \title{Анализ опроса словацкой молодежи 2013}
-    \author
-{Никита Козловский\\
-\\
-\normalsize{ВГУ, ПММ, 3 группа}\\}
-\date{}
-\maketitle
-
-\section{Введение}
-    Рассмотрим данные, представленные на сайте \url{https://www.kaggle.com/miroslavsabo/young-people-survey}
-	Опрос был проведен факультетом факультет социальных и экономических наук Университета имени Коменского в Братиславе в 2013 году. Было опрошено 1010 человек по 150 пунктам: 
-	\begin{itemize}
-\item Предпочтения в музыке (19 пунктов)
-\item Предпочтения в фильмах (12 пунктов)
-\item Хобби и интересы (32 пунктов)
-\item Фобии (10 пунктов)
-\item Здравоохранение (3 пунктов)
-\item Черты характера, взгляды на жизнь и мнения (57 пунктов)
-\item На что тратите деньги (7 пунктов)
-\item Демографические данные (10 пунктов)
-\end{itemize}
+    \maketitle
     
-\pagebreak
-\section{Анкета}
-\subsection{МУЗЫКАЛЬНЫЕ ПРЕДПОЧТЕНИЯ}
-\begin{enumerate}
-\item Мне нравится слушать музыку: Категорически не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я предпочитаю: Медленную музыку 1-2-3-4-5 Быструю музыку (целое)
-\item Dance, Disco, Funk: Не нравится вообще1-2-3-4-5 Нравится очень (целое)
-\item Народная музыка: Не нравится вообще 1-2-3-4-5 люблю (целое)
-\item Кантри: Не нравится вообще 1-2-3-4-5 Нравится очень (целое)
-\item Классика: Не нравится вообще 1-2-3-4-5 Нравится очень (целое)
-\item Мюзиклы: Не нравится вообще 1-2-3-4-5 Нравится очень (целое)
-\item Поп: Не нравится вообще 1-2-3-4-5 Нравится очень (целое)
-\item Рок: Не нравится вообще 1-2-3-4-5 Нравится очень (целое)
-\item Металл, хард-рок: Не нравится вообще 1-2-3-4-5 Нравится очень (целое)
-\item Панк: Не нравится вообще  1-2-3-4-5 Нравится очень (целое)
-\item Хип-хоп, Рэп: Не нравится вообще 1-2-3-4-5 Нравится очень (целое)
-\item Reggae, Ska: Не нравится вообще 1-2-3-4-5 Нравится очень (целое)
-\item Swing, Jazz: не нравится вообще 1-2-3-4-5 Нравится очень (целое)
-\item Рок-н-ролл: не нравится вообще 1-2-3-4-5 Нравится очень (целое)
-\item Альтернативная музыка: не нравится вообще 1-2-3-4-5 Нравится очень (целое)
-\item Латино: не нравится вообще 1-2-3-4-5 Нравится очень (целое)
-\item Техно, Транс: не нравится вообще  1-2-3-4-5 Нравится очень (целое)
-\item Опера: не нравится вообще  1-2-3-4-5 Нравится очень (целое)
-\end{enumerate}
-\subsection{ФИЛЬМЫ ПРЕДПОЧТЕНИЯ}
-\begin{enumerate}
-\item Мне очень нравится смотреть фильмы: Сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Фильмы ужасов: Не нравится вообще 1-2-3-4-5 Нравится очень (целое)
-\item Триллеры: Не нравится вообще 1-2-3-4-5 Нравится очень (целое)
-\item Комедии: не нравится вообще 1-2-3-4-5 Нравится очень (целое)
-\item Романтические фильмы: Не нравится вообще 1-2-3-4-5 Нравится очень (целое)
-\item Научно-фантастические фильмы: Не нравится вообще 1-2-3-4-5 Нравится очень (целое)
-\item Военные фильмы: Не нравится вообще 1-2-3-4-5 Нравится очень (целое)
-\item Сказки: Не нравится вообще 1-2-3-4-5 Нравится очень (целое)
-\item Мультфильмы: Не нравится вообще 1-2-3-4-5 Наслаждайтесь очень (целое)
-\item Документальные фильмы: Не нравится вообще 1-2-3-4-5 Нравится очень (целое)
-\item Западные фильмы: Не нравится вообще 1-2-3-4-5 Нравится очень (целое)
-\item Экшн фильмы: Не нравится вообще 1-2-3-4-5 Нравится очень (целое)
-\end{enumerate}
-\subsection{ХОББИ ИНТЕРЕСЫ}
-\begin{enumerate}
-\item История: Не интересует 1-2-3-4-5 Очень интересно (целое)
-\item Психология: не интересует 1-2-3-4-5 Очень интересно (целое)
-\item Политика: Не интересует 1-2-3-4-5 Очень интересно (целое)
-\item Математика: не интересует 1-2-3-4-5 Очень интересно (целое)
-\item Физика: не интересует 1-2-3-4-5 Очень интересно (целое)
-\item Интернет: не интересует 1-2-3-4-5 Очень интересно (целое)
-\item Программное обеспечение для ПК, Оборудование: Не интересует 1-2-3-4-5 Очень интересно (целое)
-\item Экономика, Менеджмент: Не интересует 1-2-3-4-5 Очень интересно (целое)
-\item Биология: не интересует 1-2-3-4-5 Очень интересно (целое)
-\item Химия: не интересует 1-2-3-4-5 Очень интересно (целое)
-\item Чтение стихов: Не интересует 1-2-3-4-5 Очень интересно (целое)
-\item География: Не интересует 1-2-3-4-5 Очень интересно (целое)
-\item Иностранные языки: не интересуются 1-2-3-4-5 Очень интересно (целое)
-\item Медицина: не интересует 1-2-3-4-5 Очень интересно (целое)
-\item Закон: не интересует 1-2-3-4-5 Очень интересно (целое)
-\item Автомобили: Не интересует 1-2-3-4-5 Очень интересно (целое)
-\item Искусство: Не интересует 1-2-3-4-5 Очень интересно (целое)
-\item Религия: Не интересует 1-2-3-4-5 Очень интересно (целое)
-\item Мероприятия на свежем воздухе: не интересует 1-2-3-4-5 Очень интересно (целое)
-\item Танцы: не интересуются 1-2-3-4-5 Очень интересно (целое)
-\item Игра на музыкальных инструментах: не интересует 1-2-3-4-5 Очень интересно (целое)
-\item Поэзия: Не интересно 1-2-3-4-5 Очень интересно (целое)
-\item Занятия спортом: Не интересуюсь 1-2-3-4-5 Очень интересно (целое)
-\item Спорт на конкурентном уровне: не интересует 1-2-3-4-5 Очень интересно (целое)
-\item Садоводство: Не интересует 1-2-3-4-5 Очень интересно (целое)
-\item Знаменитый образ жизни: не интересует 1-2-3-4-5 Очень интересно (целое)
-\item Покупки: Не интересует 1-2-3-4-5 Очень интересно (целое)
-\item Наука и техника: не интересует 1-2-3-4-5 Очень интересно (целое)
-\item Театр: не интересует 1-2-3-4-5 Очень интересно (целое)
-\item Общение: Не интересует 1-2-3-4-5 Очень интересно (целое)
-\item Адреналин спорт: не интересует 1-2-3-4-5 Очень интересно (целое)
-\item Домашние животные: Не интересуются 1-2-3-4-5 Очень интересно (целое)
-\end{enumerate}
-\subsection{ФОБИИ}
-\begin{enumerate}
-\item Летающий: совсем не боится 1-2-3-4-5 Очень боится (целое)
-\item Гром, молния: совсем не боюсь 1-2-3-4-5 Очень боится (целое)
-\item Тьма: не боится совсем 1-2-3-4-5 Очень боится (целое)
-\item Высота: совсем не боится 1-2-3-4-5 Очень боится (целое)
-\item Пауки: совсем не боюсь 1-2-3-4-5 Очень боится (целое)
-\item Змеи: совсем не боюсь 1-2-3-4-5 Очень боится (целое)
-\item Крысы, мыши: совсем не боятся 1-2-3-4-5 Очень боится (целое)
-\end{enumerate}
-\subsection{ЗДОРОВЬЕ}
-\begin{enumerate}
-\item Отношение к курению: Никогда не курил - Пробовал курить - Бывший курильщик - Текущий курильщик (Номинальная)
-\item Пью: Никогда - Пью в компаниях - Пью много (Номинальная)
-\item Я живу очень здоровым образом жизни: сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\end{enumerate}
-\subsection{ЧЕРТЫ ХАРАКТЕРА, ВЗГЛЯДЫ НА ЖИЗНЬ}
-\begin{enumerate}
-\item Я обращаю внимание на то, что происходит вокруг: сильно не согласен 1-2-3-4-5. Полностью согласен (целое)
-\item Я стараюсь выполнять задания как можно скорее и не оставлять их до последней минуты .: Сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я всегда составляю список, поэтому ничего не забываю: сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я часто учусь или работаю даже в свободное время .: Сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я смотрю на вещи с разных точек зрения, прежде чем идти вперед. Полностью не согласен 1-2-3-4-5. Полностью согласен (целое)
-\item Я считаю, что плохие люди пострадают в один прекрасный день, и хорошие люди будут вознаграждены. Полностью не согласен 1-2-3-4-5. Полностью согласен (целое)
-\item Я надёжен на работе и всегда выполняю все заданные мне задачи: Полностью не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я всегда соблюдаю свои обещания: сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я могу быстро попасть на кого-то, а затем полностью потерять интерес. Полностью не согласен 1-2-3-4-5. Полностью согласен (целое)
-\item Я бы предпочел иметь много друзей, чем много денег. Полностью не согласен 1-2-3-4-5. Полностью согласен (целое)
-\item Я всегда стараюсь быть самым смешным: сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Иногда я могу столкнуться с двумя лицами: Полностью не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я повредил вещи в прошлом, когда сердился .: Сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я не тороплюсь, чтобы принимать решения: сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я всегда стараюсь голосовать на выборах: сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я часто думаю и сожалею о принимаемых мной решениях: Полностью не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я могу сказать, слушают ли меня люди или нет, когда я говорю с ними: Полностью не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я ипохондрик. Полностью не согласен 1-2-3-4-5. Полностью согласен (целое)
-\item Я - эмфатичный человек. Сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я ем, потому что должен. Я не наслаждаюсь едой и еду так быстро, как могу: Категорически не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я стараюсь отдать столько, сколько я могу, другим людям на Рождество: сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Мне не нравится встречаться с животными: Полностью не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я ухаживаю за вещами, которые я заимствовал у других: сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я чувствую себя одиноким в жизни: Сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Раньше я учился в школе: Сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я беспокоюсь о своем здоровье: сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Хотел бы я изменить прошлое из-за того, что я сделал: Полностью не согласен 1-2-3-4-5 Сильно соглашаюсь (целое)
-\item Я верю в Бога: Полностью не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item У меня всегда хорошие мечты: сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я всегда отдаю благотворительность. Полностью не согласен 1-2-3-4-5. Полностью согласен (целое)
-\item У меня много друзей: сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Сроки: Я часто бываю на ранней стадии. - Я всегда вовремя. - Я часто опаздываю. (Категорично)
-\item Вы лжете другим: Никогда. - Только чтобы не причинять кому-либо вреда. Иногда. - Каждый раз мне это подходит. (Номинальная)
-\item Я очень терпелив: сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я могу быстро адаптироваться к новой среде .: Сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Мое настроение меняется быстро: сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я хорошо воспитан, и я ухаживаю за внешностью: Полностью не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Мне нравится встречаться с новыми людьми .: Сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я всегда позволяю другим людям узнать о моих достижениях: Полностью не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я думаю, тщательно, прежде чем отвечать на любые важные письма .: Полностью не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я люблю детей: сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я не боюсь высказать свое мнение, если я сильно против чего либо: Полностью не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я могу рассердиться очень легко: сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я всегда убеждаюсь, что я общаюсь с нужными людьми: сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я должен быть хорошо подготовлен перед публичным выступлением: Полностью не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я виноват в том, люди меня не любят. Полностью не согласен 1-2-3-4-5. Полностью согласен (целое)
-\item Я плачу, когда чувствую себя, или все идет не так. Абсолютно не согласен 1-2-3-4-5. Полностью согласен (целое)
-\item Я на 100\% доволен своей жизнью. Полностью не согласен 1-2-3-4-5. Полностью согласен (целое)
-\item Я всегда полна жизни и энергии: Полностью не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я предпочитаю крупных опасных собак более мелким, более спокойным собакам: Полностью не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я считаю, что все мои черты характера положительные: сильно не согласны 1-2-3-4-5. Полностью согласен (целое)
-\item Если я найду что-то, что не принадлежит мне, я передам его. Полностью не согласен 1-2-3-4-5. Полностью согласен (целое)
-\item Мне очень трудно вставать утром: сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item У меня много разных увлечений и интересов: Полностью не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я всегда слушаю совет моих родителей: Полностью не согласен 1-2-3-4-5. Полностью согласен (целое)
-\item Мне нравится участвовать в опросах: сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Сколько времени вы проводите в Интернете ?: Не провожу - Менее часа в день - Несколько часов в день - Большая часть дня (Номинальная)
-\end{enumerate}
-\subsection{НА ЧТО ВЫ ТРАТИТЕ ДЕНЬГИ}
-\begin{enumerate}
-\item Я могу сэкономить все, что могу. Полностью не согласен 1-2-3-4-5. Полностью согласен (целое)
-\item Мне нравится ходить в крупные торговые центры .: Сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я предпочитаю фирменную одежду: сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я трачу много денег на вечеринки и общение: Сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я трачу много денег на внешний вид: сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я трачу много денег на гаджеты: Полностью не согласен 1-2-3-4-5 Полностью согласен (целое)
-\item Я буду с удовольствием  платить больше денег за хорошее, качественное или здоровое питание: Полностью не согласен 1-2-3-4-5 Полностью согласен (целое)
-\end{enumerate}
-\subsection{ДАННЫЕ О СЕБЕ}
-\begin{enumerate}
-\item Возраст: (целое)
-\item Высота: (целое)
-\item Вес: (целое)
-\item Сколько у вас братьев и сестер ?: (целое)
-\item Пол: Женский - Мужской (Номинальная)
-\item Я: Левая рука - Правая (Номинальная)
-\item Высшее образование: В настоящее время ученик начальной школы - Начальная школа - Средняя школа - Колледж / Степень бакалавра (Номинальная)
-\item Я единственный ребенок: Нет - Да (Номинальная)
-\item Я провел большую часть своего детства в: Городе -  деревне (Номинальная)
-\item Я прожил большую часть своего детства в: доме  - многоквартирном доме (Номинальная)
-\end{enumerate}
-\pagebreak
+    
 
     
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}11}]:} \PY{k+kn}{import} \PY{n+nn}{pandas} \PY{k}{as} \PY{n+nn}{pd}
-         \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+{\color{incolor}In [{\color{incolor}3}]:} \PY{k+kn}{import} \PY{n+nn}{pandas} \PY{k}{as} \PY{n+nn}{pd}
+        \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
 \end{Verbatim}
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}73}]:} \PY{n}{names} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{columns.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-         \PY{n}{df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{responses.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-         \PY{n}{music} \PY{o}{=} \PY{n}{df}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{:}\PY{l+m+mi}{18}\PY{p}{]}
-         \PY{n}{music} \PY{o}{=} \PY{n}{music}\PY{o}{.}\PY{n}{dropna}\PY{p}{(}\PY{p}{)}
-         \PY{n}{music}\PY{o}{.}\PY{n}{describe}\PY{p}{(}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}4}]:} \PY{k+kn}{from} \PY{n+nn}{pandas} \PY{k}{import} \PY{n}{Series}
+        \PY{k}{def} \PY{n+nf}{customDescribe}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{:}
+            \PY{n}{data} \PY{o}{=} \PY{p}{[}\PY{n}{x}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{x}\PY{o}{.}\PY{n}{std}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{x}\PY{o}{.}\PY{n}{min}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{x}\PY{o}{.}\PY{n}{quantile}\PY{p}{(}\PY{l+m+mf}{0.25}\PY{p}{)}\PY{p}{,} \PY{n}{x}\PY{o}{.}\PY{n}{median}\PY{p}{(}\PY{p}{)}\PY{p}{,} 
+                    \PY{n}{x}\PY{o}{.}\PY{n}{quantile}\PY{p}{(}\PY{l+m+mf}{0.75}\PY{p}{)}\PY{p}{,} \PY{n}{x}\PY{o}{.}\PY{n}{max}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{x}\PY{o}{.}\PY{n}{skew}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{x}\PY{o}{.}\PY{n}{kurtosis}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{x}\PY{o}{.}\PY{n}{mode}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{max}\PY{p}{(}\PY{p}{)}\PY{p}{,} 
+                    \PY{n}{x}\PY{o}{.}\PY{n}{isnull}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{p}{)}\PY{p}{]}
+            \PY{n}{names} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mean}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{std}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{min}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{25}\PY{l+s+s1}{\PYZpc{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{50}\PY{l+s+s1}{\PYZpc{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{75}\PY{l+s+s1}{\PYZpc{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{max}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+             \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{skewness}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{kurtosis}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mode}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{NAs}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+            \PY{k}{return} \PY{n}{Series}\PY{p}{(}\PY{n}{data}\PY{p}{,} \PY{n}{index}\PY{o}{=}\PY{n}{names}\PY{p}{)}
+        
+        \PY{n}{names} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{columns.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{responses.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{music} \PY{o}{=} \PY{n}{df}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{:}\PY{l+m+mi}{18}\PY{p}{]}
+        \PY{n}{music}\PY{o}{.}\PY{n}{apply}\PY{p}{(}\PY{n}{customDescribe}\PY{p}{)}
 \end{Verbatim}
 
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}73}]:}             Dance        Folk     Country  Classical music     Musical  \textbackslash{}
-         count  937.000000  937.000000  937.000000       937.000000  937.000000   
-         mean     3.099253    2.279616    2.133404         2.964781    2.772679   
-         std      1.173865    1.134511    1.082260         1.254836    1.271222   
-         min      1.000000    1.000000    1.000000         1.000000    1.000000   
-         25\%      2.000000    1.000000    1.000000         2.000000    2.000000   
-         50\%      3.000000    2.000000    2.000000         3.000000    3.000000   
-         75\%      4.000000    3.000000    3.000000         4.000000    4.000000   
-         max      5.000000    5.000000    5.000000         5.000000    5.000000   
-         
-                       Pop        Rock  Metal or Hardrock        Punk  Hiphop, Rap  \textbackslash{}
-         count  937.000000  937.000000         937.000000  937.000000   937.000000   
-         mean     3.472785    3.764141           2.357524    2.443970     2.890075   
-         std      1.171034    1.171636           1.373291    1.291536     1.370351   
-         min      1.000000    1.000000           1.000000    1.000000     1.000000   
-         25\%      3.000000    3.000000           1.000000    1.000000     2.000000   
-         50\%      4.000000    4.000000           2.000000    2.000000     3.000000   
-         75\%      4.000000    5.000000           3.000000    3.000000     4.000000   
-         max      5.000000    5.000000           5.000000    5.000000     5.000000   
-         
-                Reggae, Ska  Swing, Jazz  Rock n roll  Alternative      Latino  \textbackslash{}
-         count   937.000000   937.000000   937.000000   937.000000  937.000000   
-         mean      2.768410     2.766275     3.154749     2.854856    2.855923   
-         std       1.198621     1.258227     1.231947     1.342222    1.325115   
-         min       1.000000     1.000000     1.000000     1.000000    1.000000   
-         25\%       2.000000     2.000000     2.000000     2.000000    2.000000   
-         50\%       3.000000     3.000000     3.000000     3.000000    3.000000   
-         75\%       4.000000     4.000000     4.000000     4.000000    4.000000   
-         max       5.000000     5.000000     5.000000     5.000000    5.000000   
-         
-                Techno, Trance  
-         count      937.000000  
-         mean         2.320171  
-         std          1.317189  
-         min          1.000000  
-         25\%          1.000000  
-         50\%          2.000000  
-         75\%          3.000000  
-         max          5.000000  
+{\color{outcolor}Out[{\color{outcolor}4}]:}              Dance      Folk   Country  Classical music   Musical       Pop  \textbackslash{}
+        mean      3.113320  2.288557  2.123383         2.956132  2.761905  3.471698   
+        std       1.170568  1.138916  1.076136         1.252570  1.260845  1.161400   
+        min       1.000000  1.000000  1.000000         1.000000  1.000000  1.000000   
+        25\%       2.000000  1.000000  1.000000         2.000000  2.000000  3.000000   
+        50\%       3.000000  2.000000  2.000000         3.000000  3.000000  4.000000   
+        75\%       4.000000  3.000000  3.000000         4.000000  4.000000  4.000000   
+        max       5.000000  5.000000  5.000000         5.000000  5.000000  5.000000   
+        skewness -0.045760  0.694783  0.795798         0.107357  0.219951 -0.383317   
+        kurtosis -0.803331 -0.216416 -0.037576        -0.969287 -0.928080 -0.704309   
+        mode      3.000000  2.000000  2.000000         3.000000  3.000000  4.000000   
+        NAs       4.000000  5.000000  5.000000         7.000000  2.000000  3.000000   
+        
+                      Rock  Metal or Hardrock      Punk  Hiphop, Rap  Reggae, Ska  \textbackslash{}
+        mean      3.761952           2.361470  2.456088     2.910537     2.769691   
+        std       1.184861           1.372995  1.301105     1.375677     1.214434   
+        min       1.000000           1.000000  1.000000     1.000000     1.000000   
+        25\%       3.000000           1.000000  1.000000     2.000000     2.000000   
+        50\%       4.000000           2.000000  2.000000     3.000000     3.000000   
+        75\%       5.000000           3.000000  3.000000     4.000000     4.000000   
+        max       5.000000           5.000000  5.000000     5.000000     5.000000   
+        skewness -0.702586           0.604915  0.441427     0.037217     0.156497   
+        kurtosis -0.419187          -0.934732 -0.959379    -1.250059    -0.900509   
+        mode      5.000000           1.000000  1.000000     4.000000     3.000000   
+        NAs       6.000000           3.000000  8.000000     4.000000     7.000000   
+        
+                  Swing, Jazz  Rock n roll  Alternative    Latino  Techno, Trance  
+        mean         2.759960     3.141575     2.828514  2.842315        2.338983  
+        std          1.257936     1.237269     1.347173  1.327902        1.324099  
+        min          1.000000     1.000000     1.000000  1.000000        1.000000  
+        25\%          2.000000     2.000000     2.000000  2.000000        1.000000  
+        50\%          3.000000     3.000000     3.000000  3.000000        2.000000  
+        75\%          4.000000     4.000000     4.000000  4.000000        3.000000  
+        max          5.000000     5.000000     5.000000  5.000000        5.000000  
+        skewness     0.146457    -0.108936     0.162211  0.188489        0.569644  
+        kurtosis    -0.997739    -0.917436    -1.129404 -1.099347       -0.906037  
+        mode         3.000000     3.000000     3.000000  2.000000        1.000000  
+        NAs          6.000000     7.000000     7.000000  8.000000        7.000000  
 \end{Verbatim}
             
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}15}]:} \PY{k+kn}{import} \PY{n+nn}{seaborn} \PY{k}{as} \PY{n+nn}{sbn}
-         \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
-         \PY{n}{corr} \PY{o}{=} \PY{n}{music}\PY{o}{.}\PY{n}{corr}\PY{p}{(}\PY{p}{)} \PY{c+c1}{\PYZsh{}попарная корреляция Пиросона }
-         \PY{n}{sbn}\PY{o}{.}\PY{n}{heatmap}\PY{p}{(}\PY{n}{corr}\PY{p}{,} 
-                     \PY{n}{xticklabels}\PY{o}{=}\PY{n}{corr}\PY{o}{.}\PY{n}{columns}\PY{o}{.}\PY{n}{values}\PY{p}{,}
-                     \PY{n}{yticklabels}\PY{o}{=}\PY{n}{corr}\PY{o}{.}\PY{n}{columns}\PY{o}{.}\PY{n}{values}\PY{p}{,}
-                     \PY{n}{vmax}\PY{o}{=}\PY{o}{.}\PY{l+m+mi}{8}\PY{p}{,} \PY{n}{square}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
-         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}5}]:} \PY{n}{music} \PY{o}{=} \PY{n}{music}\PY{o}{.}\PY{n}{dropna}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}9}]:} \PY{k+kn}{import} \PY{n+nn}{seaborn} \PY{k}{as} \PY{n+nn}{sns}
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+        \PY{n}{plt\PYZus{}dict} \PY{o}{=} \PY{p}{\PYZob{}}\PY{p}{\PYZcb{}}
+        
+        \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{n+nb}{len}\PY{p}{(}\PY{n}{music}\PY{o}{.}\PY{n}{columns}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+            \PY{n}{plt\PYZus{}dict}\PY{o}{.}\PY{n}{update}\PY{p}{(}\PY{p}{\PYZob{}}\PY{n}{i}\PY{p}{:}\PY{n}{music}\PY{o}{.}\PY{n}{columns}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{\PYZcb{}}\PY{p}{)}
+        
+        \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{,}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{15}\PY{p}{,}\PY{l+m+mi}{15}\PY{p}{)}\PY{p}{,} \PY{n}{sharey}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,} \PY{n}{sharex}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+        \PY{n}{x} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{]}
+        \PY{n}{initial} \PY{o}{=} \PY{l+m+mi}{0}
+        
+        \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{)}\PY{p}{:}
+            \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{)}\PY{p}{:}
+                \PY{n}{y} \PY{o}{=} \PY{n}{music}\PY{p}{[}\PY{n}{plt\PYZus{}dict}\PY{p}{[}\PY{n}{initial}\PY{p}{]}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{to\PYZus{}dict}\PY{p}{(}\PY{p}{)}
+                \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{bar}\PY{p}{(}\PY{n}{y}\PY{o}{.}\PY{n}{keys}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{y}\PY{o}{.}\PY{n}{values}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+                \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xticklabels}\PY{p}{(}\PY{n}{labels}\PY{o}{=}\PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{)}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{)}
+                \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}yticklabels}\PY{p}{(}\PY{n}{labels}\PY{o}{=}\PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{601}\PY{p}{,}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{)}
+                \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{n}{plt\PYZus{}dict}\PY{p}{[}\PY{n}{initial}\PY{p}{]}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{)}
+                \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlim}\PY{p}{(}\PY{o}{.}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{)}
+                \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylim}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{600}\PY{p}{)}
+                \PY{n}{initial} \PY{o}{+}\PY{o}{=} \PY{l+m+mi}{1}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_2_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_3_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}69}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
-         \PY{k+kn}{import} \PY{n+nn}{matplotlib}
-         \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
-         \PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{model\PYZus{}selection} \PY{k}{import} \PY{n}{cross\PYZus{}val\PYZus{}score}
+{\color{incolor}In [{\color{incolor}14}]:} \PY{k+kn}{from} \PY{n+nn}{scipy}\PY{n+nn}{.}\PY{n+nn}{stats}\PY{n+nn}{.}\PY{n+nn}{mstats} \PY{k}{import} \PY{n}{normaltest}
+         \PY{k+kn}{import} \PY{n+nn}{scipy}
          
-         \PY{n}{n\PYZus{}features} \PY{o}{=} \PY{n+nb}{len}\PY{p}{(}\PY{n}{music}\PY{o}{.}\PY{n}{columns}\PY{p}{)}
-         \PY{n}{n\PYZus{}components} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{)}
-         \PY{n}{fa\PYZus{}scores} \PY{o}{=} \PY{p}{[}\PY{p}{]}
-         \PY{n}{fa} \PY{o}{=} \PY{n}{FactorAnalysis}\PY{p}{(}\PY{p}{)}
-         \PY{n}{fa}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{music}\PY{p}{)}
-         \PY{k}{for} \PY{n}{n} \PY{o+ow}{in} \PY{n}{n\PYZus{}components}\PY{p}{:}
-             \PY{n}{fa}\PY{o}{.}\PY{n}{n\PYZus{}components} \PY{o}{=} \PY{n}{n}
-             \PY{n}{fa\PYZus{}scores}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{n}{cross\PYZus{}val\PYZus{}score}\PY{p}{(}\PY{n}{fa}\PY{p}{,} \PY{n}{music}\PY{p}{)}\PY{p}{)}\PY{p}{)}
-         \PY{n}{n\PYZus{}components\PYZus{}fa} \PY{o}{=} \PY{n}{n\PYZus{}components}\PY{p}{[}\PY{n}{np}\PY{o}{.}\PY{n}{argmax}\PY{p}{(}\PY{n}{fa\PYZus{}scores}\PY{p}{)}\PY{p}{]}
-         \PY{n+nb}{print}\PY{p}{(}\PY{n}{n\PYZus{}components\PYZus{}fa}\PY{p}{)}
+         \PY{n}{normaltest}\PY{p}{(}\PY{n}{music}\PY{p}{)}\PY{o}{.}\PY{n}{pvalue}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}14}]:} array([  1.73933578e-018,   9.70589103e-015,   9.08852599e-018,
+                  3.03938325e-039,   1.85007144e-036,   1.81645640e-017,
+                  1.15204030e-016,   6.09948269e-042,   3.13553153e-039,
+                  2.84113677e-210,   7.36973614e-024,   2.01589772e-045,
+                  2.74815258e-029,   1.90506599e-087,   1.42014654e-076,
+                  2.82482142e-037])
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor} }]:} \PY{k+kn}{import} \PY{n+nn}{seaborn} \PY{k}{as} \PY{n+nn}{sns}
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+        \PY{n}{corr} \PY{o}{=} \PY{n}{music}\PY{o}{.}\PY{n}{corr}\PY{p}{(}\PY{p}{)} \PY{c+c1}{\PYZsh{}попарная корреляция Пиросона }
+        \PY{n}{sns}\PY{o}{.}\PY{n}{heatmap}\PY{p}{(}\PY{n}{corr}\PY{p}{,} 
+                    \PY{n}{xticklabels}\PY{o}{=}\PY{n}{corr}\PY{o}{.}\PY{n}{columns}\PY{o}{.}\PY{n}{values}\PY{p}{,}
+                    \PY{n}{yticklabels}\PY{o}{=}\PY{n}{corr}\PY{o}{.}\PY{n}{columns}\PY{o}{.}\PY{n}{values}\PY{p}{,}
+                    \PY{n}{vmax}\PY{o}{=}\PY{o}{.}\PY{l+m+mi}{8}\PY{p}{,} \PY{n}{square}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-3
-
-    \end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}72}]:} \PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{decomposition} \PY{k}{import} \PY{n}{FactorAnalysis}
-         \PY{n}{factor} \PY{o}{=} \PY{n}{FactorAnalysis}\PY{p}{(}\PY{n}{n\PYZus{}components}\PY{o}{=}\PY{l+m+mi}{3}\PY{p}{)}
-         \PY{n}{factor}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{music}\PY{p}{)}
-         \PY{n+nb}{print} \PY{p}{(}\PY{p}{(}\PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{factor}\PY{o}{.}\PY{n}{components\PYZus{}}\PY{p}{,}\PY{n}{columns}\PY{o}{=}\PY{n}{music}\PY{o}{.}\PY{n}{columns}\PY{p}{)}\PY{p}{)}\PY{o}{.}\PY{n}{transpose}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+{\color{incolor}In [{\color{incolor} }]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib}
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+        \PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{model\PYZus{}selection} \PY{k}{import} \PY{n}{cross\PYZus{}val\PYZus{}score}
+        \PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{decomposition} \PY{k}{import} \PY{n}{FactorAnalysis}
+        
+        \PY{n}{n\PYZus{}features} \PY{o}{=} \PY{n+nb}{len}\PY{p}{(}\PY{n}{music}\PY{o}{.}\PY{n}{columns}\PY{p}{)}
+        \PY{n}{n\PYZus{}components} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{)}
+        \PY{n}{fa\PYZus{}scores} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+        \PY{n}{fa} \PY{o}{=} \PY{n}{FactorAnalysis}\PY{p}{(}\PY{p}{)}
+        \PY{n}{fa}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{music}\PY{p}{)}
+        \PY{k}{for} \PY{n}{n} \PY{o+ow}{in} \PY{n}{n\PYZus{}components}\PY{p}{:}
+            \PY{n}{fa}\PY{o}{.}\PY{n}{n\PYZus{}components} \PY{o}{=} \PY{n}{n}
+            \PY{n}{fa\PYZus{}scores}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{n}{cross\PYZus{}val\PYZus{}score}\PY{p}{(}\PY{n}{fa}\PY{p}{,} \PY{n}{music}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+        \PY{n}{n\PYZus{}components\PYZus{}fa} \PY{o}{=} \PY{n}{n\PYZus{}components}\PY{p}{[}\PY{n}{np}\PY{o}{.}\PY{n}{argmax}\PY{p}{(}\PY{n}{fa\PYZus{}scores}\PY{p}{)}\PY{p}{]}
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Количество факторов: }\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{n\PYZus{}components\PYZus{}fa}\PY{p}{)}
 \end{Verbatim}
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-                          0         1         2
-Dance             -0.303149  0.665696 -0.425720
-Folk               0.311782  0.402950  0.319220
-Country            0.313558  0.329835  0.181988
-Classical music    0.553627  0.341860  0.451575
-Musical            0.262464  0.568232  0.329080
-Pop               -0.271719  0.560852 -0.217120
-Rock               0.801508 -0.061497 -0.227127
-Metal or Hardrock  0.876026 -0.348435 -0.235428
-Punk               0.816995 -0.247060 -0.472734
-Hiphop, Rap       -0.374550  0.465859 -0.570731
-Reggae, Ska        0.342663  0.340363 -0.349031
-Swing, Jazz        0.604564  0.515972  0.191347
-Rock n roll        0.780514  0.306515 -0.001735
-Alternative        0.737268 -0.003769 -0.025753
-Latino             0.043111  0.813650  0.124829
-Techno, Trance    -0.234808  0.353415 -0.452851
-
-    \end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor} }]:} 
+{\color{incolor}In [{\color{incolor} }]:} \PY{n}{factor} \PY{o}{=} \PY{n}{FactorAnalysis}\PY{p}{(}\PY{n}{n\PYZus{}components}\PY{o}{=}\PY{l+m+mi}{3}\PY{p}{)}
+        \PY{n}{factor}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{music}\PY{p}{)}
+        \PY{n+nb}{print} \PY{p}{(}\PY{p}{(}\PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{factor}\PY{o}{.}\PY{n}{components\PYZus{}}\PY{p}{,}\PY{n}{columns}\PY{o}{=}\PY{n}{music}\PY{o}{.}\PY{n}{columns}\PY{p}{)}\PY{p}{)}\PY{o}{.}\PY{n}{transpose}\PY{p}{(}\PY{p}{)}\PY{p}{)}
 \end{Verbatim}
 
 
