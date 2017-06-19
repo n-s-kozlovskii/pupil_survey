@@ -282,6 +282,11 @@
 \normalsize{ВГУ, ПММ, 3 группа}\\}
 \date{}
 \maketitle
+\thispagestyle{empty}
+\newpage
+\tableofcontents
+\thispagestyle{empty}
+\newpage
 
 \section{Введение}
     Рассмотрим данные, представленные на сайте \url{https://www.kaggle.com/miroslavsabo/young-people-survey}
@@ -303,10 +308,45 @@
 \item Что определяет бережливого человека ? (регрессия) 
 \item Анализ страхов по группам 
 \end{itemize}
+
+Пример данных
+
+  \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}24}]:} \PY{n}{df}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}24}]:}    Music  Slow songs or fast songs  Dance  Folk  Country  Classical music  \textbackslash{}
+         0    5.0                       3.0    2.0   1.0      2.0              2.0   
+         1    4.0                       4.0    2.0   1.0      1.0              1.0   
+         2    5.0                       5.0    2.0   2.0      3.0              4.0   
+         3    5.0                       3.0    2.0   1.0      1.0              1.0   
+         
+            Musical  Pop  Rock  Metal or Hardrock           {\ldots}             Age  \textbackslash{}
+         0      1.0  5.0   5.0                1.0           {\ldots}            20.0   
+         1      2.0  3.0   5.0                4.0           {\ldots}            19.0   
+         2      5.0  3.0   5.0                3.0           {\ldots}            20.0   
+         3      1.0  2.0   2.0                1.0           {\ldots}            22.0   
+         
+            Height  Weight  Number of siblings  Gender  Left - right handed  \textbackslash{}
+         0   163.0    48.0                 1.0  female         right handed   
+         1   163.0    58.0                 2.0  female         right handed   
+         2   176.0    67.0                 2.0  female         right handed   
+         3   172.0    59.0                 1.0  female         right handed   
+         
+                          Education  Only child  Village - town  House - block of flats  
+         0  college/bachelor degree          no         village          block of flats  
+         1  college/bachelor degree          no            city          block of flats  
+         2         secondary school          no            city          block of flats  
+         3  college/bachelor degree         yes            city          house/bungalow  
+         
+         [4 rows x 150 columns]
+\end{Verbatim}
     
 \pagebreak
 \section{Анкета}
-\subsection{МУЗЫКАЛЬНЫЕ ПРЕДПОЧТЕНИЯ}
+\subsection{Музыкальные предпочтения}
 \begin{enumerate}
 \item Мне нравится слушать музыку: Категорически не согласен 1-2-3-4-5 Полностью согласен (целое)
 \item Я предпочитаю: Медленную музыку 1-2-3-4-5 Быструю музыку (целое)
@@ -328,7 +368,7 @@
 \item Техно, Транс: не нравится вообще  1-2-3-4-5 Нравится очень (целое)
 \item Опера: не нравится вообще  1-2-3-4-5 Нравится очень (целое)
 \end{enumerate}
-\subsection{ФИЛЬМЫ ПРЕДПОЧТЕНИЯ}
+\subsection{Предпочтения в фильмах}
 \begin{enumerate}
 \item Мне очень нравится смотреть фильмы: Сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
 \item Фильмы ужасов: Не нравится вообще 1-2-3-4-5 Нравится очень (целое)
@@ -343,7 +383,7 @@
 \item Западные фильмы: Не нравится вообще 1-2-3-4-5 Нравится очень (целое)
 \item Экшн фильмы: Не нравится вообще 1-2-3-4-5 Нравится очень (целое)
 \end{enumerate}
-\subsection{ХОББИ ИНТЕРЕСЫ}
+\subsection{Интересы и хобби}
 \begin{enumerate}
 \item История: Не интересует 1-2-3-4-5 Очень интересно (целое)
 \item Психология: не интересует 1-2-3-4-5 Очень интересно (целое)
@@ -378,7 +418,7 @@
 \item Адреналин спорт: не интересует 1-2-3-4-5 Очень интересно (целое)
 \item Домашние животные: Не интересуются 1-2-3-4-5 Очень интересно (целое)
 \end{enumerate}
-\subsection{ФОБИИ}
+\subsection{Фобии}
 \begin{enumerate}
 \item Летающий: совсем не боится 1-2-3-4-5 Очень боится (целое)
 \item Гром, молния: совсем не боюсь 1-2-3-4-5 Очень боится (целое)
@@ -388,13 +428,13 @@
 \item Змеи: совсем не боюсь 1-2-3-4-5 Очень боится (целое)
 \item Крысы, мыши: совсем не боятся 1-2-3-4-5 Очень боится (целое)
 \end{enumerate}
-\subsection{ЗДОРОВЬЕ}
+\subsection{Отношение к здоровью}
 \begin{enumerate}
 \item Отношение к курению: Никогда не курил - Пробовал курить - Бывший курильщик - Текущий курильщик (Номинальная)
 \item Пью: Никогда - Пью в компаниях - Пью много (Номинальная)
 \item Я живу очень здоровым образом жизни: сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
 \end{enumerate}
-\subsection{ЧЕРТЫ ХАРАКТЕРА, ВЗГЛЯДЫ НА ЖИЗНЬ}
+\subsection{Черты характера, взгляды на жизнь}
 \begin{enumerate}
 \item Я обращаю внимание на то, что происходит вокруг: сильно не согласен 1-2-3-4-5. Полностью согласен (целое)
 \item Я стараюсь выполнять задания как можно скорее и не оставлять их до последней минуты .: Сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
@@ -454,7 +494,7 @@
 \item Мне нравится участвовать в опросах: сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
 \item Сколько времени вы проводите в Интернете ?: Не провожу - Менее часа в день - Несколько часов в день - Большая часть дня (Номинальная)
 \end{enumerate}
-\subsection{НА ЧТО ВЫ ТРАТИТЕ ДЕНЬГИ}
+\subsection{Отношение к деньгам}
 \begin{enumerate}
 \item Я могу сэкономить все, что смогу. Полностью не согласен 1-2-3-4-5. Полностью согласен (целое)
 \item Мне нравится ходить в крупные торговые центры .: Сильно не согласен 1-2-3-4-5 Полностью согласен (целое)
@@ -464,7 +504,7 @@
 \item Я трачу много денег на гаджеты: Полностью не согласен 1-2-3-4-5 Полностью согласен (целое)
 \item Я буду с удовольствием  платить больше денег за хорошее, качественное или здоровое питание: Полностью не согласен 1-2-3-4-5 Полностью согласен (целое)
 \end{enumerate}
-\subsection{ДАННЫЕ О СЕБЕ}
+\subsection{Данные о себе}
 \begin{enumerate}
 \item Возраст: (целое)
 \item Высота: (целое)
@@ -480,6 +520,7 @@
 \pagebreak
 
 \section{Описательные статистики}
+\subsection{Основные численные характеристики}
 Из-за большого количества признаков, рассмотрим лишь подможество из множества ответов, а именно рассмотрим
 предпочтения в музыке. Для каждой характериски расчитаем 
 
@@ -487,9 +528,11 @@
 \item mean – средняя величина из исходных значений $\bar{x} = \frac{x_1+x_2+\cdots +x_n}{n}$;
 \item std  –  стандартное отклонение, мера того, насколько широко разбросаны точки данных относительно их средних $s = \sqrt{\frac{1}{N-1} \sum_{i=1}^N (x_i - \overline{x})^2}$
 \item min, max -- минимальное и максимальное значение
-\item 25\% , 50\% , 75\% квантили соответствующих уровней. Значение, которое заданная случайная величина не превышает с фиксированной вероятностью. Верхняя квантиль включает 25\% наибольших чисел в наборе, нижняя, соответственно, 25\% наименьших чисел в наборе, 50\% соответсвует медиане выборки. 
-\item skewness – коэффициент асимметрии, который показывает, насколько симметрично распределение данной случайной величины. Если коэффициент асимметрии положителен, то отклонение происходит в сторону положительных значений, в ином случае – отрицательных.
-\item kurtosis – эксцесс – мера крутости кривой распределения. Кривая распределения может быть островершинной, плосковершинной, средне вершинной. Эти четыре момента составляют набор особенностей распределения при анализе данных. Для нормального распределения А=0, Е=0. Положительный эксцесс обозначает относительно остроконечное распределение. Отрицательный эксцесс обозначает относительно сглаженное распределение.
+\item 25\% , 50\% , 75\% квантили соответствующих уровней. Значение, которое заданная случайная величина не превышает с фиксированной вероятностью. Верхняя квантиль включает 25\% наибольших чисел в наборе, нижняя, соответственно, 25\% наименьших чисел в наборе, 50\% соответсвует медиане выборки
+\item skewness – коэффициент асимметрии, который показывает, насколько симметрично распределение данной случайной величины. Если коэффициент асимметрии положителен, то отклонение происходит в сторону положительных значений, в ином случае – отрицательных
+\item kurtosis – эксцесс – мера крутости кривой распределения. Кривая распределения может быть островершинной, плосковершинной, средне вершинной. Эти четыре момента составляют набор особенностей распределения при анализе данных. Для нормального распределения А=0, Е=0. Положительный эксцесс обозначает относительно остроконечное распределение. Отрицательный эксцесс обозначает относительно сглаженное распределение
+\item mode – мода, наиболее часто встречаемое значение
+\item NAs -- количество пропущенных данных. 
 \end{itemize}
   
     \begin{Verbatim}[commandchars=\\\{\}]
@@ -497,8 +540,8 @@
          \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
 \end{Verbatim}
 
-
-   \begin{Verbatim}[commandchars=\\\{\}]
+%описательные
+\begin{Verbatim}[commandchars=\\\{\}]
 {\color{incolor}In [{\color{incolor}4}]:} \PY{k+kn}{from} \PY{n+nn}{pandas} \PY{k}{import} \PY{n}{Series}
         \PY{k}{def} \PY{n+nf}{customDescribe}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{:}
             \PY{n}{data} \PY{o}{=} \PY{p}{[}\PY{n}{x}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{x}\PY{o}{.}\PY{n}{std}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{x}\PY{o}{.}\PY{n}{min}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{x}\PY{o}{.}\PY{n}{quantile}\PY{p}{(}\PY{l+m+mf}{0.25}\PY{p}{)}\PY{p}{,} \PY{n}{x}\PY{o}{.}\PY{n}{median}\PY{p}{(}\PY{p}{)}\PY{p}{,} 
@@ -513,8 +556,6 @@
         \PY{n}{music} \PY{o}{=} \PY{n}{df}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{:}\PY{l+m+mi}{18}\PY{p}{]}
         \PY{n}{music}\PY{o}{.}\PY{n}{apply}\PY{p}{(}\PY{n}{customDescribe}\PY{p}{)}
 \end{Verbatim}
-
-
 \begin{Verbatim}[commandchars=\\\{\}]
 {\color{outcolor}Out[{\color{outcolor}4}]:}              Dance      Folk   Country  Classical music   Musical       Pop  \textbackslash{}
         mean      3.113320  2.288557  2.123383         2.956132  2.761905  3.471698   
@@ -555,13 +596,123 @@
         mode         3.000000     3.000000     3.000000  2.000000        1.000000  
         NAs          6.000000     7.000000     7.000000  8.000000        7.000000  
 \end{Verbatim}
+ 
+
+\subsection{Визуализация данных}
+
+%графички
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}5}]:} \PY{n}{music} \PY{o}{=} \PY{n}{music}\PY{o}{.}\PY{n}{dropna}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
 
 
-            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}9}]:} \PY{k+kn}{import} \PY{n+nn}{seaborn} \PY{k}{as} \PY{n+nn}{sns}
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+        \PY{n}{plt\PYZus{}dict} \PY{o}{=} \PY{p}{\PYZob{}}\PY{p}{\PYZcb{}}
+        
+        \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{n+nb}{len}\PY{p}{(}\PY{n}{music}\PY{o}{.}\PY{n}{columns}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+            \PY{n}{plt\PYZus{}dict}\PY{o}{.}\PY{n}{update}\PY{p}{(}\PY{p}{\PYZob{}}\PY{n}{i}\PY{p}{:}\PY{n}{music}\PY{o}{.}\PY{n}{columns}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{\PYZcb{}}\PY{p}{)}
+        
+        \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{,}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{15}\PY{p}{,}\PY{l+m+mi}{15}\PY{p}{)}\PY{p}{,} \PY{n}{sharey}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,} \PY{n}{sharex}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+        \PY{n}{x} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{]}
+        \PY{n}{initial} \PY{o}{=} \PY{l+m+mi}{0}
+        
+        \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{)}\PY{p}{:}
+            \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{)}\PY{p}{:}
+                \PY{n}{y} \PY{o}{=} \PY{n}{music}\PY{p}{[}\PY{n}{plt\PYZus{}dict}\PY{p}{[}\PY{n}{initial}\PY{p}{]}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{to\PYZus{}dict}\PY{p}{(}\PY{p}{)}
+                \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{bar}\PY{p}{(}\PY{n}{y}\PY{o}{.}\PY{n}{keys}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{y}\PY{o}{.}\PY{n}{values}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+                \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xticklabels}\PY{p}{(}\PY{n}{labels}\PY{o}{=}\PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{)}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{)}
+                \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}yticklabels}\PY{p}{(}\PY{n}{labels}\PY{o}{=}\PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{601}\PY{p}{,}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{)}
+                \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{n}{plt\PYZus{}dict}\PY{p}{[}\PY{n}{initial}\PY{p}{]}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{)}
+                \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlim}\PY{p}{(}\PY{o}{.}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{)}
+                \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylim}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{600}\PY{p}{)}
+                \PY{n}{initial} \PY{o}{+}\PY{o}{=} \PY{l+m+mi}{1}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_3_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+\subsection{Вывод}
+Как видно, кривые распределений плосковерхие, при этом для большинсва графиков четко прослеживается 
+тяготение к одному из крайних допустимых значений. Это связано, во-первых, с тем, что данные носят дискретный
+характер, а во-вторых, сам характер данных (предпочтение в музыке) носят всеобщий и стихийный характер. Стиль или более-менее устраивает всех -- альтернативная музыка, теряет популярность, как, например фолк, имеет преданных фанатав, как рок,
+а может вызывать неприязнь, как техно. 
+
+\section{Проверка нормальности распределения}
+Построим normal probability plot для всех характеристик наших данных (ожидаемое и представленное 
+значение). Как видно, распределены не нормально. Это же следует из предоставленного окружением 
+scipy теста normaltest, который, в частности возвращает p-value, которое показывает вероятность 
+отклонения нулевой гипотезы, которая состоит в том, что данные распределены равномерно. 
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}38}]:} \PY{k+kn}{from} \PY{n+nn}{scipy}\PY{n+nn}{.}\PY{n+nn}{stats}\PY{n+nn}{.}\PY{n+nn}{mstats} \PY{k}{import} \PY{n}{normaltest}
+         \PY{k+kn}{from} \PY{n+nn}{scipy}\PY{n+nn}{.}\PY{n+nn}{stats} \PY{k}{import} \PY{n}{probplot}
+         \PY{k+kn}{import} \PY{n+nn}{seaborn} \PY{k}{as} \PY{n+nn}{sns}
+         \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+         \PY{n}{plt\PYZus{}dict} \PY{o}{=} \PY{p}{\PYZob{}}\PY{p}{\PYZcb{}}
+         
+         \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{n+nb}{len}\PY{p}{(}\PY{n}{music}\PY{o}{.}\PY{n}{columns}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+             \PY{n}{plt\PYZus{}dict}\PY{o}{.}\PY{n}{update}\PY{p}{(}\PY{p}{\PYZob{}}\PY{n}{i}\PY{p}{:}\PY{n}{music}\PY{o}{.}\PY{n}{columns}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{\PYZcb{}}\PY{p}{)}
+         
+         \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{,}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{15}\PY{p}{,}\PY{l+m+mi}{15}\PY{p}{)}\PY{p}{,} \PY{n}{sharey}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,} \PY{n}{sharex}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{x} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{]}
+         \PY{n}{initial} \PY{o}{=} \PY{l+m+mi}{0}
+         
+         \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{)}\PY{p}{:}
+             \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{)}\PY{p}{:}
+                 \PY{n}{probplot}\PY{p}{(}\PY{n}{music}\PY{p}{[}\PY{n}{plt\PYZus{}dict}\PY{p}{[}\PY{n}{initial}\PY{p}{]}\PY{p}{]}\PY{p}{,} \PY{n}{plot}\PY{o}{=}\PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{p}{)}
+                 \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                 \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                 \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xticklabels}\PY{p}{(}\PY{n}{labels}\PY{o}{=}\PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{20}\PY{p}{,}\PY{l+m+mi}{20}\PY{p}{)}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{)}
+                 \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}yticklabels}\PY{p}{(}\PY{n}{labels}\PY{o}{=}\PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{)}
+                 \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{n}{plt\PYZus{}dict}\PY{p}{[}\PY{n}{initial}\PY{p}{]}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{)}
+                 \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylim}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{)}
+                 
+                 \PY{n}{initial} \PY{o}{+}\PY{o}{=} \PY{l+m+mi}{1}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+         
+         \PY{n}{normaltest}\PY{p}{(}\PY{n}{music}\PY{p}{)}\PY{o}{.}\PY{n}{pvalue}
+\end{Verbatim}
+
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_4_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}38}]:} array([  1.73933578e-018,   9.70589103e-015,   9.08852599e-018,
+                  3.03938325e-039,   1.85007144e-036,   1.81645640e-017,
+                  1.15204030e-016,   6.09948269e-042,   3.13553153e-039,
+                  2.84113677e-210,   7.36973614e-024,   2.01589772e-045,
+                  2.74815258e-029,   1.90506599e-087,   1.42014654e-076,
+                  2.82482142e-037])
+\end{Verbatim}
+ 
+\section{Факторный анализ}
+\subsection{Постановка задачи} 
+Попробуем уменьшить предпочтения в музыке в несколько удобных, легко интерпретируемых
+ факторов, которые лучше помогут
+понять ответы респондендентов. Подобный подход может быть применен по любой другой схожей
+категории ответов (по фильмам, хобби и т.д). 
+
+\subsection{Корреляции} 
+Для начала посмотрим, как данные коррелируют друг с другом, воспользовавшись 
+коэфициентом Пирсона $\mathbf{r}_{XY} = \frac{\mathbf{cov}_{XY}}{\mathbf{\sigma}_{X}{\sigma}_{Y}}= \frac{\sum (X-\bar{X})(Y-\bar{Y})}{\sqrt{\sum (X-\bar{X})^2}\sqrt{\sum (Y-\bar{Y})^2}}$
+           
     \begin{Verbatim}[commandchars=\\\{\}]
 {\color{incolor}In [{\color{incolor}15}]:} \PY{k+kn}{import} \PY{n+nn}{seaborn} \PY{k}{as} \PY{n+nn}{sbn}
          \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
-         \PY{n}{corr} \PY{o}{=} \PY{n}{music}\PY{o}{.}\PY{n}{corr}\PY{p}{(}\PY{p}{)} \PY{c+c1}{\PYZsh{}попарная корреляция Пиросона }
+         \PY{n}{corr} \PY{o}{=} \PY{n}{music}\PY{o}{.}\PY{n}{corr}\PY{p}{(}\PY{p}{)} 
          \PY{n}{sbn}\PY{o}{.}\PY{n}{heatmap}\PY{p}{(}\PY{n}{corr}\PY{p}{,} 
                      \PY{n}{xticklabels}\PY{o}{=}\PY{n}{corr}\PY{o}{.}\PY{n}{columns}\PY{o}{.}\PY{n}{values}\PY{p}{,}
                      \PY{n}{yticklabels}\PY{o}{=}\PY{n}{corr}\PY{o}{.}\PY{n}{columns}\PY{o}{.}\PY{n}{values}\PY{p}{,}
@@ -571,9 +722,21 @@
 
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_2_0.png}
+    \adjustimage{max size={0.8\linewidth}{0.8\paperheight}}{output_2_0.png}
     \end{center}
     { \hspace*{\fill} \\}
+    
+Данные связанны между собой довольно очевидным образом, например классическая музыка и опера, рок, панк
+и тяжелый метал, а так же наблюдаются другие, не менее очевидные корреляции. 
+
+\subsection{Описание метода} 
+Проведем факторый анализ. Он имеет простую линейную форму 
+$$z_{ai}=\sum_p \ell_{ap}F_{pi}+\varepsilon_{ai},$$ где $F_{pi}$ это общие факторы, а $\varepsilon_{ai}$ 
+характерный фактор $i$-ого показателя. Дисперсия любого исходного показателя состоит из общности и характерности. Общность характеризует ту часть дисперсии исходного показателя, которая объясняется общими факторами. 
+Ставится задача по исходным показателям подобрать так общие факторы, чтобы они как можно в большей мере вариацию исходных показателей. В модели делается предположение, что исходные показатели имеют среднее значение, равное 0 и дисперсию = 1. Это предположение не выполняется ни для одной переменной, поэтому предварительно данные нормируются.
+
+Окружение scikit learn предоставляет програмные средства для подбора оптимального 
+числа факторов, а так же обучаемую модель. 
     
     \begin{Verbatim}[commandchars=\\\{\}]
 {\color{incolor}In [{\color{incolor}69}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
@@ -628,14 +791,406 @@ Techno, Trance    -0.234808  0.353415 -0.452851
 
     \end{Verbatim}
 
+  \begin{Verbatim}[commandchars=\\\{\}]
+                          0         1         2
+Dance                        0.665696 
+Folk                                   0.319220
+Country                                
+Classical music                        0.451575
+Musical                      0.568232  0.329080
+Pop                          0.560852 
+Rock               0.801508           
+Metal or Hardrock  0.876026            
+Punk               0.816995            
+Hiphop, Rap                            
+Reggae, Ska                            
+Swing, Jazz                            
+Rock n roll        0.780514            
+Alternative        0.737268             
+Latino                       0.813650   
+Techno, Trance                         
+
+    \end{Verbatim}
+
+\subsection{Вывод}
+Данное разбиение дает три легко интерпетируемые группы: в первой 
+любители тяжелой музыик, во вторую попали люди, любящие танцевальную
+музыку, а третью -- любители классики.
+
+\section{Классификация через логистическую регрессию}
+
+\subsection{Постановка задачи}
+Попробуем ответить на вопрос: что влияет на то, что человек бережливо относится к деньгам? 
+
+
+\subsection{Предобработка данных}
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor} }]:} 
+{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{import} \PY{n+nn}{pandas} \PY{k}{as} \PY{n+nn}{pd}
+        \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+        
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+        \PY{k+kn}{import} \PY{n+nn}{seaborn} \PY{k}{as} \PY{n+nn}{sns}
+        \PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
+        \PY{n}{plt}\PY{o}{.}\PY{n}{style}\PY{o}{.}\PY{n}{use}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{fivethirtyeight}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+
+Загрузим данные
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}3}]:} 
+        \PY{n}{df1} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{responses.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 \end{Verbatim}
 
 
+ 
+Выделим подмножество значений, которые будем использовать в дальнейшем исследовании
 
-    % Add a bibliography block to the postdoc
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}5}]:}\PY{n}{mov\PYZus{}mus}   \PY{o}{=} \PY{n}{df1}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{19}\PY{p}{]}\PY{p}{]}
+        \PY{n}{scared}    \PY{o}{=} \PY{n}{df1}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{63}\PY{p}{:}\PY{l+m+mi}{73}\PY{p}{]}
+        \PY{n}{interests} \PY{o}{=} \PY{n}{df1}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{31}\PY{p}{:}\PY{l+m+mi}{63}\PY{p}{]}
+        \PY{n}{demo}      \PY{o}{=} \PY{n}{df1}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{140}\PY{p}{:}\PY{l+m+mi}{150}\PY{p}{]}
+        \PY{n}{spending}  \PY{o}{=} \PY{n}{df1}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{134}\PY{p}{:}\PY{l+m+mi}{140}\PY{p}{]}
+        \PY{n}{predict}   \PY{o}{=} \PY{n}{df1}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{133}\PY{p}{]}
+        
+        \PY{n}{scared}\PY{o}{.}\PY{n}{fillna}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+        \PY{n}{scared} \PY{o}{=} \PY{n}{scared}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{n}{axis}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
+        
+        \PY{n}{df2} \PY{o}{=} \PY{n}{mov\PYZus{}mus}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{p}{[}\PY{n}{scared}\PY{p}{,} \PY{n}{interests}\PY{p}{,} \PY{n}{demo}\PY{p}{,} \PY{n}{spending}\PY{p}{,} \PY{n}{predict}\PY{p}{]}\PY{p}{)}
+        \PY{n}{df2}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+m+mi}{0}\PY{p}{:}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Scared}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}6}]:} \PY{n}{df2}\PY{o}{.}\PY{n}{info}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+Получили такое подмножество
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 1010 entries, 0 to 1009
+Data columns (total 52 columns):
+Music                         1007 non-null float64
+Movies                        1004 non-null float64
+Scared                        1010 non-null float64
+History                       1008 non-null float64
+Psychology                    1005 non-null float64
+Politics                      1009 non-null float64
+Mathematics                   1007 non-null float64
+Physics                       1007 non-null float64
+Internet                      1006 non-null float64
+PC                            1004 non-null float64
+Economy Management            1005 non-null float64
+Biology                       1004 non-null float64
+Chemistry                     1000 non-null float64
+Reading                       1004 non-null float64
+Geography                     1001 non-null float64
+Foreign languages             1005 non-null float64
+Medicine                      1005 non-null float64
+Law                           1009 non-null float64
+Cars                          1006 non-null float64
+Art exhibitions               1004 non-null float64
+Religion                      1007 non-null float64
+Countryside, outdoors         1003 non-null float64
+Dancing                       1007 non-null float64
+Musical instruments           1009 non-null float64
+Writing                       1004 non-null float64
+Passive sport                 995 non-null float64
+Active sport                  1006 non-null float64
+Gardening                     1003 non-null float64
+Celebrities                   1008 non-null float64
+Shopping                      1008 non-null float64
+Science and technology        1004 non-null float64
+Theatre                       1002 non-null float64
+Fun with friends              1006 non-null float64
+Adrenaline sports             1007 non-null float64
+Pets                          1006 non-null float64
+Age                           1003 non-null float64
+Height                        990 non-null float64
+Weight                        990 non-null float64
+Number of siblings            1004 non-null float64
+Gender                        1004 non-null object
+Left - right handed           1007 non-null object
+Education                     1009 non-null object
+Only child                    1008 non-null object
+Village - town                1006 non-null object
+House - block of flats        1006 non-null object
+Shopping centres              1008 non-null float64
+Branded clothing              1008 non-null float64
+Entertainment spending        1007 non-null float64
+Spending on looks             1007 non-null float64
+Spending on gadgets           1010 non-null int64
+Spending on healthy eating    1008 non-null float64
+Finances                      1007 non-null float64
+dtypes: float64(45), int64(1), object(6)
+memory usage: 410.4+ KB
+
+    \end{Verbatim}
+
+Обработаем пропущенные данные 
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}7}]:} 
+        \PY{n}{drop\PYZus{}list} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Gender}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Left \PYZhy{} right handed}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Education}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Only child}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Village \PYZhy{} town}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{House \PYZhy{} block of flats}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Finances}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+        \PY{n}{df2}\PY{o}{.}\PY{n}{dropna}\PY{p}{(}\PY{n}{subset}\PY{o}{=} \PY{n}{drop\PYZus{}list}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+        \PY{n}{df2}\PY{o}{.}\PY{n}{fillna}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+\end{Verbatim}
+
+и представим наглядно те данные с которыми будем работать
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}10}]:} \PY{n}{plt\PYZus{}dict} \PY{o}{=} \PY{p}{\PYZob{}}\PY{p}{\PYZcb{}}
+         
+         \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{n+nb}{len}\PY{p}{(}\PY{n}{interests}\PY{o}{.}\PY{n}{columns}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+             \PY{n}{plt\PYZus{}dict}\PY{o}{.}\PY{n}{update}\PY{p}{(}\PY{p}{\PYZob{}}\PY{n}{i}\PY{p}{:}\PY{n}{interests}\PY{o}{.}\PY{n}{columns}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{\PYZcb{}}\PY{p}{)}
+                     
+         \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{8}\PY{p}{,}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{16}\PY{p}{,}\PY{l+m+mi}{16}\PY{p}{)}\PY{p}{,} \PY{n}{sharey}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,} \PY{n}{sharex}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         
+         \PY{n}{initial} \PY{o}{=} \PY{l+m+mi}{0}
+         
+         \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{)}\PY{p}{:}
+             \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{8}\PY{p}{)}\PY{p}{:}
+                 \PY{n}{sns}\PY{o}{.}\PY{n}{countplot}\PY{p}{(}\PY{n}{df2}\PY{p}{[}\PY{n}{plt\PYZus{}dict}\PY{p}{[}\PY{n}{initial}\PY{p}{]}\PY{p}{]}\PY{p}{,} \PY{n}{ax}\PY{o}{=}\PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{p}{)}
+                 \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                 \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                 \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xticklabels}\PY{p}{(}\PY{n}{labels}\PY{o}{=}\PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{)}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{5}\PY{p}{)}
+                 \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}yticklabels}\PY{p}{(}\PY{n}{labels}\PY{o}{=}\PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{601}\PY{p}{,}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{5}\PY{p}{)}
+                 \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{n}{plt\PYZus{}dict}\PY{p}{[}\PY{n}{initial}\PY{p}{]}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{)}
+                 \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlim}\PY{p}{(}\PY{o}{.}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mf}{5.5}\PY{p}{)}
+                 \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylim}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{600}\PY{p}{)}
+                 \PY{n}{initial} \PY{o}{+}\PY{o}{=} \PY{l+m+mi}{1}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_6_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
     
+Часть данных представленна номинальными переменными. Выведем их 
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}13}]:} \PY{n}{obj\PYZus{}dict} \PY{o}{=} \PY{p}{\PYZob{}}\PY{l+m+mi}{0}\PY{p}{:}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Gender}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{:}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Left \PYZhy{} right handed}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{:}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Only child}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{:}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Village \PYZhy{} town}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{:}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{House \PYZhy{} block of flats}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{:}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Education}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}
+         \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{16}\PY{p}{,}\PY{l+m+mi}{16}\PY{p}{)}\PY{p}{,} \PY{n}{sharey}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         
+         \PY{n}{initial} \PY{o}{=} \PY{l+m+mi}{0}
+         
+         \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{:}
+             \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{:}
+                 \PY{n}{sns}\PY{o}{.}\PY{n}{countplot}\PY{p}{(}\PY{n}{df2}\PY{p}{[}\PY{n}{obj\PYZus{}dict}\PY{p}{[}\PY{n}{initial}\PY{p}{]}\PY{p}{]}\PY{p}{,} \PY{n}{ax}\PY{o}{=}\PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{p}{)}
+                 \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{n}{obj\PYZus{}dict}\PY{p}{[}\PY{n}{initial}\PY{p}{]}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{15}\PY{p}{)}
+                 \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                 \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                 \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xticklabels}\PY{p}{(}\PY{n}{labels}\PY{o}{=}\PY{n}{df2}\PY{p}{[}\PY{n}{obj\PYZus{}dict}\PY{p}{[}\PY{n}{initial}\PY{p}{]}\PY{p}{]}\PY{o}{.}\PY{n}{unique}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{12}\PY{p}{)}
+                 \PY{n}{initial} \PY{o}{+}\PY{o}{=} \PY{l+m+mi}{1}
+         
+         \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xticklabels}\PY{p}{(}\PY{n}{labels}\PY{o}{=}\PY{n}{df2}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Education}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{unique}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{rotation}\PY{o}{=}\PY{l+m+mi}{20}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{9}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}13}]:} [<matplotlib.text.Text at 0x7f3d38ecfd30>,
+          <matplotlib.text.Text at 0x7f3d38aa6588>,
+          <matplotlib.text.Text at 0x7f3d3917bcc0>,
+          <matplotlib.text.Text at 0x7f3d3880bf60>,
+          <matplotlib.text.Text at 0x7f3d3938f550>,
+          <matplotlib.text.Text at 0x7f3d38ae7ef0>]
+\end{Verbatim}
+            
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_7_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+
+и преобразуем к целочисленным переменным, 
+чтобы их можно было обрабатывать        
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}14}]:} \PY{n}{gender}  \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{get\PYZus{}dummies}\PY{p}{(}\PY{n}{df2}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Gender}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+         \PY{n}{handed}  \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{get\PYZus{}dummies}\PY{p}{(}\PY{n}{df2}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Left \PYZhy{} right handed}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+         \PY{n}{child}   \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{get\PYZus{}dummies}\PY{p}{(}\PY{n}{df2}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Only child}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+         \PY{n}{vil\PYZus{}tow} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{get\PYZus{}dummies}\PY{p}{(}\PY{n}{df2}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Village \PYZhy{} town}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+         \PY{n}{resid}   \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{get\PYZus{}dummies}\PY{p}{(}\PY{n}{df2}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{House \PYZhy{} block of flats}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+         \PY{n}{educa}   \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{get\PYZus{}dummies}\PY{p}{(}\PY{n}{df2}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Education}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+         
+         \PY{n}{df2}\PY{o}{.}\PY{n}{drop}\PY{p}{(}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Gender}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Left \PYZhy{} right handed}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Only child}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Village \PYZhy{} town}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{House \PYZhy{} block of flats}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Education}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,} \PY{n}{axis}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{df2} \PY{o}{=} \PY{n}{df2}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{p}{[}\PY{n}{gender}\PY{p}{,} \PY{n}{handed}\PY{p}{,} \PY{n}{child}\PY{p}{,} \PY{n}{vil\PYZus{}tow}\PY{p}{,} \PY{n}{resid}\PY{p}{,} \PY{n}{educa}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}27}]:} \PY{c+c1}{\PYZsh{}отобразим характер расходовы по категориям}
+         \PY{n}{spend\PYZus{}aves} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{Series}\PY{p}{(}\PY{n}{df2}\PY{p}{[}\PY{n}{spending}\PY{o}{.}\PY{n}{columns}\PY{p}{]}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+         \PY{n}{spend\PYZus{}aves} \PY{o}{=} \PY{n}{spend\PYZus{}aves}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{pd}\PY{o}{.}\PY{n}{Series}\PY{p}{(}\PY{n}{df2}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Finances}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{index}\PY{o}{=}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Finances}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+         \PY{n}{spend\PYZus{}aves}\PY{o}{.}\PY{n}{plot}\PY{p}{(}
+             \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{6}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{,} \PY{n}{kind}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{barh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Средний ответ}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
+             \PY{n}{color}\PY{o}{=}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZsh{}30a2da}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZsh{}fc4f30}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZsh{}e5ae38}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZsh{}6d904f}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZsh{}8b8b8b}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{m}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,} \PY{n}{xlim}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{axvline}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{n}{np}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{n}{spend\PYZus{}aves}\PY{p}{)}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{k}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{lw}\PY{o}{=}\PY{l+m+mi}{4}\PY{p}{,} \PY{n}{ls}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dashed}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Студенты оценили свою способность сберегать в }\PY{l+s+si}{\PYZob{}:.2f\PYZcb{}}\PY{l+s+s1}{ \PYZhy{} но данные по всей таблице выше }\PY{l+s+si}{\PYZob{}:.2f\PYZcb{}}\PY{l+s+s1}{. }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{ Это говорит о том, что молодежь тратит денег больше, чем думает}\PY{l+s+s1}{\PYZsq{}}
+               \PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{df2}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Finances}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}\PY{p}{,}\PY{n}{np}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{n}{spend\PYZus{}aves}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Студенты оценили свою способность сберегать в 3.03 - но данные по всей таблице выше 3.15. 
+ Это говорит о том, что молодежь тратит денег больше, чем думает, что тратит
+
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_9_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+Чтобы не проводить многозначное прогнозирование, разобьем характеристику "финансы" на 2 группы 
+-- 3 и меньше, и 4 и больше.
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}28}]:}  \PY{n}{df2}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{n}{df2}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Finances}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{\PYZlt{}}\PY{o}{=} \PY{l+m+mi}{3}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Finances}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{0}
+         \PY{n}{df2}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{n}{df2}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Finances}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{\PYZgt{}} \PY{l+m+mi}{3}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Finances}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{1}
+\end{Verbatim}
+
+\subsection{Идея метода}
+Воспользуемся окружением scikit learn
+kFold позволяет разделить данные 2 две пары выборок -- одну обучающую и вторую контрольную.
+Для этого подготовим данные, перенеся столбец "финансы" в другую переменную.
+Класс GridSearchCV позволяет определить оптимальный параметр для логистической регрессии.
+Затем обучим нашу модель и сравним средную точность на тренировочной выборке и на тестовой.
+Полученная точность не является идеальной, так как является "платой" за простоту модели.
+Затем отобразим полученные важности характеристик, и, для удобства, выведем первые 10. 
+
+\subsection{Реализация}
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}29}]:} \PY{c+c1}{\PYZsh{}ML}
+         \PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{cross\PYZus{}validation} \PY{k}{import} \PY{n}{KFold}\PY{p}{,} \PY{n}{train\PYZus{}test\PYZus{}split}\PY{p}{,} \PY{n}{cross\PYZus{}val\PYZus{}score}
+         \PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{model\PYZus{}selection} \PY{k}{import} \PY{n}{GridSearchCV}
+         \PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{linear\PYZus{}model} \PY{k}{import} \PY{n}{LogisticRegression}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+/usr/local/lib/python3.4/dist-packages/sklearn/cross\_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model\_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}30}]:} \PY{c+c1}{\PYZsh{}set up data for modeling}
+         \PY{n}{x} \PY{o}{=} \PY{n}{df2}\PY{o}{.}\PY{n}{drop}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Finances}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{axis}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
+         \PY{n}{y} \PY{o}{=} \PY{n}{df2}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Finances}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+         
+         \PY{n}{x\PYZus{}train}\PY{p}{,} \PY{n}{x\PYZus{}test}\PY{p}{,} \PY{n}{y\PYZus{}train}\PY{p}{,} \PY{n}{y\PYZus{}test} \PY{o}{=} \PY{n}{train\PYZus{}test\PYZus{}split}\PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{n}{y}\PY{p}{,} \PY{n}{test\PYZus{}size}\PY{o}{=}\PY{o}{.}\PY{l+m+mi}{3}\PY{p}{)}
+         
+         \PY{n}{kf} \PY{o}{=} \PY{n}{KFold}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{x\PYZus{}train}\PY{p}{)}\PY{p}{,} \PY{n}{n\PYZus{}folds}\PY{o}{=}\PY{l+m+mi}{5}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}31}]:} \PY{c+c1}{\PYZsh{}Use GridSearchCV for parameter tuning}
+         \PY{n}{logreg} \PY{o}{=} \PY{n}{LogisticRegression}\PY{p}{(}\PY{p}{)}
+         
+         \PY{n}{param\PYZus{}grid} \PY{o}{=} \PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{C}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}\PY{p}{[}\PY{o}{.}\PY{l+m+mi}{01}\PY{p}{,}\PY{o}{.}\PY{l+m+mi}{03}\PY{p}{,}\PY{o}{.}\PY{l+m+mi}{1}\PY{p}{,}\PY{o}{.}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{]}\PY{p}{\PYZcb{}}
+         
+         \PY{n}{gs\PYZus{}logreg} \PY{o}{=} \PY{n}{GridSearchCV}\PY{p}{(}\PY{n}{logreg}\PY{p}{,} \PY{n}{param\PYZus{}grid}\PY{o}{=}\PY{n}{param\PYZus{}grid}\PY{p}{,} \PY{n}{cv}\PY{o}{=}\PY{n}{kf}\PY{p}{)}
+         
+         \PY{n}{gs\PYZus{}logreg}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{x\PYZus{}train}\PY{p}{,} \PY{n}{y\PYZus{}train}\PY{p}{)}
+         \PY{n}{gs\PYZus{}logreg}\PY{o}{.}\PY{n}{best\PYZus{}params\PYZus{}}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}31}]:} \{'C': 0.01\}
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}32}]:} \PY{c+c1}{\PYZsh{}fit Logistic Regression model, eval scoring}
+         \PY{n}{logreg} \PY{o}{=} \PY{n}{LogisticRegression}\PY{p}{(}\PY{n}{C}\PY{o}{=}\PY{o}{.}\PY{l+m+mi}{01}\PY{p}{)}
+         \PY{n}{logreg}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{x\PYZus{}train}\PY{p}{,} \PY{n}{y\PYZus{}train}\PY{p}{)}
+         
+         \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Average accuracy score on cv (KFold) set: }\PY{l+s+si}{\PYZob{}:.3f\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{n}{cross\PYZus{}val\PYZus{}score}\PY{p}{(}\PY{n}{logreg}\PY{p}{,} \PY{n}{x\PYZus{}train}\PY{p}{,} \PY{n}{y\PYZus{}train}\PY{p}{,} \PY{n}{cv}\PY{o}{=}\PY{n}{kf}\PY{p}{)}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Accuracy score on test set is: }\PY{l+s+si}{\PYZob{}:.3f\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{logreg}\PY{o}{.}\PY{n}{score}\PY{p}{(}\PY{n}{x\PYZus{}test}\PY{p}{,} \PY{n}{y\PYZus{}test}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Average accuracy score on cv (KFold) set: 0.638
+Accuracy score on test set is: 0.670
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}34}]:} \PY{c+c1}{\PYZsh{}plot feature importance}
+         \PY{n}{coeff\PYZus{}df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{data}\PY{o}{=}\PY{n}{logreg}\PY{o}{.}\PY{n}{coef\PYZus{}}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{n}{index}\PY{o}{=}\PY{p}{[}\PY{n}{x\PYZus{}train}\PY{o}{.}\PY{n}{columns}\PY{p}{]}\PY{p}{,} \PY{n}{columns}\PY{o}{=}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Feature\PYZus{}Import}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+         \PY{n}{coeff\PYZus{}df} \PY{o}{=} \PY{n}{coeff\PYZus{}df}\PY{o}{.}\PY{n}{sort\PYZus{}values}\PY{p}{(}\PY{n}{by}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Feature\PYZus{}Import}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{ascending}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}
+         
+         \PY{n}{fig}\PY{p}{,} \PY{n}{ax1} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{16}\PY{p}{,}\PY{l+m+mi}{16}\PY{p}{)}\PY{p}{)}
+         
+         \PY{n}{sns}\PY{o}{.}\PY{n}{barplot}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{n}{coeff\PYZus{}df}\PY{o}{.}\PY{n}{index}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{n}{coeff\PYZus{}df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Feature\PYZus{}Import}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,} \PY{n}{ax}\PY{o}{=}\PY{n}{ax1}\PY{p}{)}
+         \PY{n}{ax1}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{All Features}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{ax1}\PY{o}{.}\PY{n}{set\PYZus{}xticklabels}\PY{p}{(}\PY{n}{labels}\PY{o}{=}\PY{n}{coeff\PYZus{}df}\PY{o}{.}\PY{n}{index}\PY{p}{,} \PY{n}{size}\PY{o}{=}\PY{l+m+mi}{6}\PY{p}{,} \PY{n}{rotation}\PY{o}{=}\PY{l+m+mi}{90}\PY{p}{)}
+         \PY{n}{ax1}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Importance}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}34}]:} <matplotlib.text.Text at 0x7f3d38df20f0>
+\end{Verbatim}
+            
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_15_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}36}]:} \PY{n}{fig}\PY{p}{,} \PY{p}{(}\PY{n}{ax1}\PY{p}{,} \PY{n}{ax2}\PY{p}{)} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{16}\PY{p}{,}\PY{l+m+mi}{16}\PY{p}{)}\PY{p}{)}
+         
+         \PY{n}{sns}\PY{o}{.}\PY{n}{barplot}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{n}{coeff\PYZus{}df}\PY{o}{.}\PY{n}{index}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{10}\PY{p}{]}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{n}{coeff\PYZus{}df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Feature\PYZus{}Import}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{)}\PY{p}{,} \PY{n}{ax}\PY{o}{=}\PY{n}{ax1}\PY{p}{)}
+         \PY{n}{ax1}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Главные положительные характеристики}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{ax1}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Importance}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{ax1}\PY{o}{.}\PY{n}{set\PYZus{}xticklabels}\PY{p}{(}\PY{n}{labels}\PY{o}{=}\PY{n}{coeff\PYZus{}df}\PY{o}{.}\PY{n}{index}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{10}\PY{p}{]}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{8}\PY{p}{,} \PY{n}{rotation}\PY{o}{=}\PY{l+m+mi}{20}\PY{p}{)}
+         
+         
+         \PY{n}{sns}\PY{o}{.}\PY{n}{barplot}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{n}{coeff\PYZus{}df}\PY{o}{.}\PY{n}{index}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{10}\PY{p}{:}\PY{p}{]}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{n}{coeff\PYZus{}df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Feature\PYZus{}Import}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{tail}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{)}\PY{p}{,} \PY{n}{ax}\PY{o}{=}\PY{n}{ax2}\PY{p}{,} \PY{n}{palette}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{hls}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{ax2}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Главные отрицательные характеристики}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{ax2}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Importance}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{ax2}\PY{o}{.}\PY{n}{set\PYZus{}xticklabels}\PY{p}{(}\PY{n}{labels}\PY{o}{=}\PY{n}{coeff\PYZus{}df}\PY{o}{.}\PY{n}{index}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{10}\PY{p}{:}\PY{p}{]}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{8}\PY{p}{,} \PY{n}{rotation}\PY{o}{=}\PY{l+m+mi}{20}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}36}]:} [<matplotlib.text.Text at 0x7f3d38bdd438>,
+          <matplotlib.text.Text at 0x7f3d386f63c8>,
+          <matplotlib.text.Text at 0x7f3d3873e9e8>,
+          <matplotlib.text.Text at 0x7f3d38731518>,
+          <matplotlib.text.Text at 0x7f3d3870d048>,
+          <matplotlib.text.Text at 0x7f3d3870db38>,
+          <matplotlib.text.Text at 0x7f3d38726668>,
+          <matplotlib.text.Text at 0x7f3d38729198>,
+          <matplotlib.text.Text at 0x7f3d38729c88>,
+          <matplotlib.text.Text at 0x7f3d3871e7b8>]
+\end{Verbatim}
+            
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_16_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+ 
+\subsection{Вывод}
+
+Из представленных данных можно сделать некоторые выводы. 
+
+Городская молодежь обычно тратит больше денег, чем деревенские жители, что легко 
+объясняется большим количеством мест, где можно потратить деньги. 
+
+Так же можно выделить самые затраные привычки (например, танцы или предпочтение тратить 
+деньги на внешний вид).
+Нельзя не отметить, что пристрастие к  чтению, любовь к языкам, географии, математике, химии и другие "интеллектуальные" занятия присущи бережливым людям.
+    % Add a bibliography block to the postdoc
     
     
     \end{document}
