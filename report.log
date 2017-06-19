@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.6.18)  19 JUN 2017 03:59
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.6.18)  19 JUN 2017 14:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1702,7 +1702,7 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\cyrh' on input line 601.
 
-[13] <output_3_0.png, id=353, 878.28125pt x 884.30376pt>
+[13] <output_3_0.png, id=358, 878.28125pt x 884.30376pt>
 File: output_3_0.png Graphic file (type png)
  <use output_3_0.png>
 Package pdftex.def Info: output_3_0.png used on input line 638.
@@ -1865,7 +1865,7 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\cyrya' on input line 648.
 
-[15 <./output_3_0.png>] <output_4_0.png, id=364, 874.26625pt x 884.30376pt>
+[15 <./output_3_0.png>] <output_4_0.png, id=369, 874.26625pt x 884.30376pt>
 File: output_4_0.png Graphic file (type png)
 
 <use output_4_0.png>
@@ -2041,7 +2041,7 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\cyri' on input line 708.
 
-<output_2_0.png, id=374, 473.77pt x 408.52625pt>
+<output_2_0.png, id=380, 473.77pt x 408.52625pt>
 File: output_2_0.png Graphic file (type png)
  <use output_2_0.png>
 Package pdftex.def Info: output_2_0.png used on input line 725.
@@ -2428,7 +2428,7 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\cyrh' on input line 826.
 
-[20] [21] [22] <output_6_0.png, id=401, 1034.86626pt x 998.73125pt>
+[20] [21] [22] <output_6_0.png, id=406, 1034.86626pt x 998.73125pt>
 File: output_6_0.png Graphic file (type png)
 
 <use output_6_0.png>
@@ -2439,7 +2439,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 971--972
 
  []
 
-[23 <./output_6_0.png>] <output_7_1.png, id=407, 1080.035pt x 1047.915pt>
+[23 <./output_6_0.png>] <output_7_1.png, id=412, 1080.035pt x 1047.915pt>
 File: output_7_1.png Graphic file (type png)
 
 <use output_7_1.png>
@@ -2450,7 +2450,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1006--1007
 
  []
 
-[25 <./output_7_1.png>] <output_9_1.png, id=419, 526.96875pt x 351.3125pt>
+[25 <./output_7_1.png>] <output_9_1.png, id=424, 526.96875pt x 351.3125pt>
 File: output_9_1.png Graphic file (type png)
 
 <use output_9_1.png>
@@ -2463,168 +2463,278 @@ Underfull \hbox (badness 10000) in paragraph at lines 1048--1049
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\CYRI' on input line 1058.
+(hyperref)                removing `\CYRI' on input line 1059.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrd' on input line 1058.
+(hyperref)                removing `\cyrd' on input line 1059.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyre' on input line 1058.
+(hyperref)                removing `\cyre' on input line 1059.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrya' on input line 1058.
+(hyperref)                removing `\cyrya' on input line 1059.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrm' on input line 1058.
+(hyperref)                removing `\cyrm' on input line 1059.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyre' on input line 1058.
+(hyperref)                removing `\cyre' on input line 1059.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrt' on input line 1058.
+(hyperref)                removing `\cyrt' on input line 1059.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyro' on input line 1058.
+(hyperref)                removing `\cyro' on input line 1059.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrd' on input line 1058.
+(hyperref)                removing `\cyrd' on input line 1059.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyra' on input line 1058.
+(hyperref)                removing `\cyra' on input line 1059.
 
 [26 <./output_9_1.png>]
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 106
+5.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ufplmbb.fd
+File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
+)
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\CYRR' on input line 1067.
-
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyre' on input line 1067.
-
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyra' on input line 1067.
+(hyperref)                removing `\CYRR' on input line 1089.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrl' on input line 1067.
+(hyperref)                removing `\cyre' on input line 1089.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyri' on input line 1067.
+(hyperref)                removing `\cyra' on input line 1089.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrz' on input line 1067.
+(hyperref)                removing `\cyrl' on input line 1089.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyra' on input line 1067.
+(hyperref)                removing `\cyri' on input line 1089.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrc' on input line 1067.
+(hyperref)                removing `\cyrz' on input line 1089.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyri' on input line 1067.
+(hyperref)                removing `\cyra' on input line 1089.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrya' on input line 1067.
+(hyperref)                removing `\cyrc' on input line 1089.
 
-[27] <output_15_1.png, id=429, 1073.00874pt x 1084.05pt>
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyri' on input line 1089.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrya' on input line 1089.
+
+[27] <output_15_1.png, id=435, 1073.00874pt x 1084.05pt>
 File: output_15_1.png Graphic file (type png)
  <use output_15_1.png>
-Package pdftex.def Info: output_15_1.png used on input line 1145.
+Package pdftex.def Info: output_15_1.png used on input line 1167.
 (pdftex.def)             Requested size: 1073.00612pt x 1084.04736pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1147--1148
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 1169--1170
 
  []
 
-[28 <./output_15_1.png>] <output_16_1.png, id=435, 1073.00874pt x 1035.87pt>
+[29 <./output_15_1.png>] <output_16_1.png, id=445, 1073.00874pt x 1035.87pt>
 File: output_16_1.png Graphic file (type png)
 
 <use output_16_1.png>
-Package pdftex.def Info: output_16_1.png used on input line 1179.
+Package pdftex.def Info: output_16_1.png used on input line 1201.
 (pdftex.def)             Requested size: 1073.00612pt x 1035.86746pt.
- [29]
-Underfull \hbox (badness 10000) in paragraph at lines 1181--1182
+
+Underfull \hbox (badness 10000) in paragraph at lines 1203--1204
 
  []
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\CYRV' on input line 1183.
+(hyperref)                removing `\CYRV' on input line 1205.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrery' on input line 1183.
+(hyperref)                removing `\cyrery' on input line 1205.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrv' on input line 1183.
+(hyperref)                removing `\cyrv' on input line 1205.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyro' on input line 1183.
+(hyperref)                removing `\cyro' on input line 1205.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrd' on input line 1183.
+(hyperref)                removing `\cyrd' on input line 1205.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1196.
 [30 <./output_16_1.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1196.
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\CYRA' on input line 1217.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrn' on input line 1217.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyra' on input line 1217.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrl' on input line 1217.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyri' on input line 1217.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrz' on input line 1217.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrp' on input line 1217.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyro' on input line 1217.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrg' on input line 1217.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrr' on input line 1217.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyru' on input line 1217.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrp' on input line 1217.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrp' on input line 1217.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyra' on input line 1217.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrm' on input line 1217.
+
+[31] <output_1_0.png, id=456, 566.115pt x 354.32375pt>
+File: output_1_0.png Graphic file (type png)
+ <use output_1_0.png>
+Package pdftex.def Info: output_1_0.png used on input line 1299.
+(pdftex.def)             Requested size: 566.11362pt x 354.32288pt.
+
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 1301--1302
+
+ []
+
+<output_1_1.png, id=461, 571.13374pt x 354.32375pt>
+File: output_1_1.png Graphic file (type png)
+ <use output_1_1.png>
+Package pdftex.def Info: output_1_1.png used on input line 1304.
+(pdftex.def)             Requested size: 571.13235pt x 354.32288pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1306--1307
+
+ []
+
+<output_1_2.png, id=462, 590.205pt x 354.32375pt>
+File: output_1_2.png Graphic file (type png)
+ <use output_1_2.png>
+Package pdftex.def Info: output_1_2.png used on input line 1309.
+(pdftex.def)             Requested size: 590.20355pt x 354.32288pt.
+ [33 <./output_1_0.png> <./output_1_1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1311--1312
+
+ []
+
+<output_1_3.png, id=469, 593.21625pt x 354.32375pt>
+File: output_1_3.png Graphic file (type png)
+ <use output_1_3.png>
+Package pdftex.def Info: output_1_3.png used on input line 1314.
+(pdftex.def)             Requested size: 593.2148pt x 354.32288pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1316--1317
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1325.
+[34 <./output_1_2.png> <./output_1_3.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1325.
  (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1196.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1196.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1325.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1325.
 
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: F53E84C52DABCD2B243E046EC65F13F6;1265.
+(rerunfilecheck)             Checksum: 549FDDE957733F4F95B16913A36EEEA9;1306.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1196.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1325.
  ) 
 Here is how much of TeX's memory you used:
- 12891 strings out of 493304
- 185417 string characters out of 6139871
+ 12923 strings out of 493304
+ 185985 string characters out of 6139871
  281897 words of memory out of 5000000
- 15876 multiletter control sequences out of 15000+600000
- 36740 words of font info for 103 fonts, out of 8000000 for 9000
+ 15899 multiletter control sequences out of 15000+600000
+ 37091 words of font info for 106 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 36i,7n,38p,798b,682s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,7n,38p,897b,682s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t2a.enc}{/usr/share/texli
 ve/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/fonts/enc/dvips/cm-
 super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texmf/fon
-ts/type1/public/cm-super/sfit1095.pfb></usr/share/texmf/fonts/type1/public/cm-s
-uper/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></
-usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/font
-s/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-su
-per/sftt1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on report.pdf (30 pages, 552696 bytes).
+usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texmf/fonts/type1/
+public/cm-super/sfit1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm
+1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share
+/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/p
+ublic/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1
+095.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on report.pdf (34 pages, 667750 bytes).
 PDF statistics:
- 542 PDF objects out of 1000 (max. 8388607)
- 474 compressed objects within 5 object streams
- 205 named destinations out of 1000 (max. 500000)
- 249 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 576 PDF objects out of 1000 (max. 8388607)
+ 495 compressed objects within 5 object streams
+ 210 named destinations out of 1000 (max. 500000)
+ 277 words of extra memory for PDF output out of 10000 (max. 10000000)
 
